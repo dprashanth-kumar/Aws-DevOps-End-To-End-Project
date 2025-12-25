@@ -1,4 +1,4 @@
-tispipeline {
+pipeline {
   agent any
   environment {
     IMAGE_NAME = "dprashanthkumar/devops-python-app"
