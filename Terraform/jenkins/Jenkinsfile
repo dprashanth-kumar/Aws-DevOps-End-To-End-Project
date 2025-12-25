@@ -4,14 +4,9 @@ pipeline {
     IMAGE_NAME = "dprashanthkumar/devops-python-app"
   }
   stages {
-    stage('Checkout') {
-      steps {
-        git ''
-      }
-    }
     stage('Build Docker Image') {
       steps {
-        sh 'docker build -t $IMAGE_NAME:latest -f docker/Dockerfile .'
+        sh 'docker build -t $IMAGE_NAME:latest -f Terraform/docker/Dockerfile .'
       }
     }
     stage('Push Image') {
