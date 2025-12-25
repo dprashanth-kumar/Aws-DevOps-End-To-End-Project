@@ -1,0 +1,11 @@
+#### Steps Followed and Commands Used
+ansible-playbook install_jenkins.yml
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+http://<EC2_PUBLIC_IP>:8080
+## Install Docker
+sudo yum install docker -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+docker ps
